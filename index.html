@@ -1,153 +1,596 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahsan Firdaus | Tech Leader & AI Operations Portfolio</title>
-  <meta name="description" content="Technical Team Leader specializing in AI operations, machine learning, autonomous vehicle data systems, and enterprise technical solutions." />
-  <meta name="keywords" content="Ahsan Firdaus, AI Operations, Machine Learning, Autonomous Vehicle, Team Lead, Portfolio" />
-  <meta name="author" content="Ahsan Firdaus" />
-  <meta property="og:title" content="Ahsan Firdaus | Tech Leader & AI Operations Portfolio" />
-  <meta property="og:description" content="Results-driven tech leader bridging AI operations, technical execution, and business impact." />
+  <meta name="description" content="Ahsan Firdaus — Technical Team Leader in AI Operations & Autonomous Vehicle Data Systems. Leading 50+ professionals on Xiaomi's AV project at Sinarmas Group." />
+  <meta name="keywords" content="Ahsan Firdaus, Team Lead, AI Operations, Autonomous Vehicle, Machine Learning, Data Annotation, LiDAR, Sinarmas, Xiaomi" />
+  <meta property="og:title" content="Ahsan Firdaus | Tech Leader & AI Operations" />
+  <meta property="og:description" content="Technical Team Leader bridging ML expertise with operational leadership in autonomous vehicle data systems." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>Ahsan Firdaus | Tech Leader & AI Operations</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="container nav">
-      <a href="#home" class="logo">Ahsan Firdaus</a>
-      <button class="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="site-nav">☰</button>
-      <ul class="nav-links" id="site-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">AF<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="assets/cv.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
-    <section id="home" class="hero container reveal">
-      <div class="hero-content">
-        <p class="eyebrow">Tech Leader & Strategist</p>
-        <h1>Ahsan Firdaus</h1>
-        <p class="subtitle">Tech Leader | AI Operations | Machine Learning Enthusiast</p>
-        <p class="summary">Results-driven Team Lead managing high-scale AI data operations and cross-functional technical teams. Specialized in bridging machine learning requirements with operational execution while delivering measurable business impact.</p>
-        <div class="cta-group">
-          <a class="btn primary" href="assets/cv.pdf" download>Download CV</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label reveal">Currently @ Sinarmas Group · Xiaomi AV Project</p>
+      <h1 class="hero-title reveal">
+        <span class="line">Ahsan</span>
+        <span class="line">Firdaus<span class="accent">.</span></span>
+      </h1>
+      <p class="hero-role reveal">Team Leader · AI Operations · Machine Learning</p>
+      <p class="hero-desc reveal">
+        I lead 50+ data professionals delivering precision annotation for next-generation autonomous vehicles — bridging ML expertise with operational excellence.
+      </p>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">50<span class="stat-plus">+</span></span>
+          <span class="stat-label">Professionals Led</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">7,870</span>
+          <span class="stat-label">Datasets / Month</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100<span class="stat-plus">%</span></span>
+          <span class="stat-label">Accuracy Post-Revision</span>
         </div>
       </div>
-      <div class="hero-image-wrap">
-        <img src="assets/profile.jpg" alt="Ahsan Firdaus profile" class="hero-image" />
+      <div class="hero-actions reveal">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Let's Connect</a>
       </div>
-    </section>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <section id="about" class="section container reveal">
-      <h2>About</h2>
-      <p>Ahsan Firdaus is a Technical Team Leader with experience in autonomous vehicle data operations, machine learning implementation, and enterprise systems. He currently leads large-scale operational teams for a global AV project and combines technical depth with operational leadership to deliver scalable, high-accuracy outcomes.</p>
-      <p>With academic and professional experience across AI/ML, ERP systems, cloud-based applications, and technical mentoring, he focuses on aligning technical execution with business goals while bridging communication between technical teams, operational stakeholders, and management.</p>
-    </section>
-
-    <section id="experience" class="section section-muted reveal">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <h3>KUPU ID (Sinarmas Group) - Team Lead</h3>
-            <p class="meta">Oct 2025 - Present</p>
-            <ul>
-              <li>Leading a cross-functional team of 50+ professionals for Xiaomi Autonomous Vehicle operations.</li>
-              <li>Delivered 7,870 datasets in March 2026 with 100% final accuracy after revision.</li>
-              <li>Improved operational scalability by optimizing annotation and QA workflows.</li>
-            </ul>
-          </article>
-          <article class="timeline-item">
-            <h3>Dinamika Teknologi Informasi - Junior Technical Consultant</h3>
-            <p class="meta">Mar 2025 - Aug 2025</p>
-            <ul>
-              <li>Customized Microsoft Dynamics 365 LMS modules using JavaScript, FetchXML, and plugins.</li>
-              <li>Automated workflows to improve system reliability and business process efficiency.</li>
-              <li>Supported UAT and migration with cross-functional consultant teams.</li>
-            </ul>
-          </article>
-          <article class="timeline-item">
-            <h3>Encryptix - Machine Learning Intern</h3>
-            <p class="meta">Dec 2024 - Jan 2025</p>
-            <ul>
-              <li>Built fraud detection models with Random Forest and XGBoost.</li>
-              <li>Improved fraud recall from 0.15 to 0.91 using SMOTE and hyperparameter tuning.</li>
-              <li>Developed NLP classification systems with TF-IDF and Logistic Regression.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section container reveal">
-      <h2>Projects</h2>
-      <div class="cards">
-        <article class="card"><h3>Credit Card Fraud Detection</h3><p>Random Forest and XGBoost pipeline improving fraud recall through class balancing and tuning.</p></article>
-        <article class="card"><h3>Vehicle Counting Detection</h3><p>YOLO-based vehicle counting system trained on 1,667 images, achieving 90% accuracy.</p></article>
-        <article class="card"><h3>Daily Cloud</h3><p>Mood-tracking application integrating face detection and NLP journaling analysis.</p></article>
-        <article class="card"><h3>Day Healthy Platform</h3><p>Health-tech platform integrating chatbot, pharmacy, insurance payment, and admin dashboard.</p></article>
-        <article class="card"><h3>Thesis Research</h3><p>Comparative analysis of machine learning algorithms for Bitcoin financial time-series prediction.</p></article>
-      </div>
-    </section>
-
-    <section id="education" class="section section-muted reveal">
-      <div class="container">
-        <h2>Education & Certifications</h2>
-        <ul class="list-grid">
-          <li><strong>Master of Software Information System</strong> - Universitas Gunadarma (Expected Sep 2026), GPA 3.82/4.00</li>
-          <li><strong>Bachelor of Informatics</strong> - Universitas Gunadarma (Aug 2024), GPA 3.80/4.00</li>
-          <li><strong>CCNA</strong> - Introduction to Networks & Switching, Routing, and Wireless Essentials</li>
-          <li><strong>TOEFL ITP</strong> - Score 597</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="skills" class="section container reveal">
-      <h2>Skills & Achievements</h2>
-      <div class="skill-columns">
-        <div>
-          <h3>Technical</h3>
-          <p>Machine Learning, TensorFlow, YOLO, Python, Data Annotation (2D/4D LiDAR), Microsoft Dynamics 365, FetchXML, JavaScript.</p>
-        </div>
-        <div>
-          <h3>Leadership & Operations</h3>
-          <p>People Leadership (50+ Team), Project Coordination, QA Management, Stakeholder Communication, Operational Excellence.</p>
-        </div>
-        <div>
-          <h3>Achievements</h3>
-          <p>Distinction Graduate (Bangkit 2023), 2nd Runner-Up LIGA CODING For Beginner (2022), 100% final data accuracy delivery.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-muted reveal">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Let us connect for opportunities in AI operations, technical leadership, and enterprise systems.</p>
-        <ul class="contact-list">
-          <li>Email: <a href="mailto:ahsanfirdaus1@gmail.com">ahsanfirdaus1@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/ahsanfirdaus1/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ahsanfirdaus1</a></li>
-          <li>GitHub: <a href="https://github.com/ahsanfirdaus1" target="_blank" rel="noopener noreferrer">https://github.com/ahsanfirdaus1</a></li>
-          <li><a class="btn primary" href="assets/cv.pdf" download>Resume Download</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
+  <!-- ABOUT -->
+  <section class="section" id="about">
     <div class="container">
-      <p>© 2026 Ahsan Firdaus. Built for GitHub Pages.</p>
+      <div class="section-label reveal">00 · About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal">Bridging technical depth<br/>with operational scale.</h2>
+          <p class="about-body reveal">
+            I'm a Team Leader at <strong>PT Dalligent Solusi Indonesia (Sinarmas Group)</strong>, currently heading the data operations for Xiaomi's Autonomous Vehicle project. My work sits at the intersection of machine learning, data quality, and people leadership.
+          </p>
+          <p class="about-body reveal">
+            What sets me apart is the combination: I have hands-on ML experience from <strong>Bangkit Academy (Google, GoTo, Traveloka)</strong> where I graduated with Distinction, and I've scaled that technical understanding into leading large cross-functional teams. I don't just manage — I understand the work deeply.
+          </p>
+          <p class="about-body reveal">
+            Whether it's resolving complex LiDAR annotation edge cases, optimizing QA pipelines, or mentoring junior annotators — I bridge the gap between what the model needs and what the team delivers.
+          </p>
+          <div class="about-tags reveal">
+            <span class="tag">Team Leadership</span>
+            <span class="tag">ML Engineering</span>
+            <span class="tag">Data Annotation</span>
+            <span class="tag">AV Perception</span>
+            <span class="tag">ERP Systems</span>
+            <span class="tag">Process Design</span>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-photo-wrap">
+            <img src="assets/profile.jpg" alt="Ahsan Firdaus" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="about-photo-fallback">AF</div>
+          </div>
+          <div class="about-quick">
+            <div class="quick-item">
+              <span class="quick-label">Location</span>
+              <span class="quick-val">Depok, West Java · Indonesia</span>
+            </div>
+            <div class="quick-item">
+              <span class="quick-label">Education</span>
+              <span class="quick-val">Master's · Universitas Gunadarma</span>
+            </div>
+            <div class="quick-item">
+              <span class="quick-label">Languages</span>
+              <span class="quick-val">Indonesian (Native) · English (Fluent)</span>
+            </div>
+            <div class="quick-item">
+              <span class="quick-label">Open To</span>
+              <span class="quick-val open-badge">Tech Leadership Roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-label reveal">01 · Experience</div>
+      <h2 class="section-title reveal">Where I've Built Things.</h2>
+
+      <div class="timeline">
+
+        <!-- KUPU / Dalligent -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot active"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card current">
+            <div class="card-header">
+              <div>
+                <span class="card-badge">Current</span>
+                <h3 class="card-title">Team Leader — Autonomous Vehicle Project</h3>
+                <p class="card-company">PT Dalligent Solusi Indonesia (Sinarmas Group)</p>
+              </div>
+              <span class="card-date">Oct 2025 – Present</span>
+            </div>
+            <p class="card-desc">Leading 50+ data professionals (annotators & QA) delivering high-precision datasets for Xiaomi's autonomous vehicle perception models. Reporting to Project Manager with 10+ direct reports.</p>
+            <div class="card-highlights">
+              <div class="highlight-chip">
+                <span class="chip-num">7,870</span>
+                <span class="chip-label">datasets in one month</span>
+              </div>
+              <div class="highlight-chip">
+                <span class="chip-num">100%</span>
+                <span class="chip-label">accuracy post-revision</span>
+              </div>
+              <div class="highlight-chip">
+                <span class="chip-num">50+</span>
+                <span class="chip-label">team members</span>
+              </div>
+            </div>
+            <ul class="card-list">
+              <li>Optimized end-to-end data pipelines from 2D camera labeling to 4D LiDAR QA verification</li>
+              <li>Facilitated daily shift management and performance audits to exceed client benchmarks</li>
+              <li>Promoted to Team Lead within 3 months based on exceptional performance</li>
+              <li>Acted as technical liaison between annotation team and management, resolving complex annotation ambiguities</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag-sm">2D/4D LiDAR Annotation</span>
+              <span class="tag-sm">Team Management</span>
+              <span class="tag-sm">QA Operations</span>
+              <span class="tag-sm">Xiaomi · AV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lembaga Komputerisasi -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot active"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <span class="card-badge ongoing">Ongoing</span>
+                <h3 class="card-title">Course Assistant & IT Helpdesk</h3>
+                <p class="card-company">Lembaga Komputerisasi · Universitas Gunadarma</p>
+              </div>
+              <span class="card-date">Sep 2022 – Present</span>
+            </div>
+            <p class="card-desc">Teaching database management & ERP to 200+ students across 5+ classes, while maintaining enterprise IT infrastructure for the university.</p>
+            <ul class="card-list">
+              <li>Delivered 9-week structured lectures on SQL, Adempiere & Microsoft Dynamics NAV for 20–40 students/class</li>
+              <li>Maintained 5+ VMware vSphere servers & 100+ computers — reduced downtime by 10%</li>
+              <li>Managed 200+ students across scheduling, grading, and stakeholder communications</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag-sm">VMware vSphere</span>
+              <span class="tag-sm">Active Directory</span>
+              <span class="tag-sm">ERP / SQL</span>
+              <span class="tag-sm">Technical Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dinamika -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Junior Technical Consultant</h3>
+                <p class="card-company">Dinamika Teknologi Informasi</p>
+              </div>
+              <span class="card-date">Mar 2025 – Aug 2025</span>
+            </div>
+            <p class="card-desc">Customized Microsoft Dynamics 365 E-Learning Management System for enterprise clients, working across the full delivery lifecycle from requirements to UAT.</p>
+            <ul class="card-list">
+              <li>Built custom modules using JavaScript, plugins, and FetchXML — improving data accuracy and automating workflows</li>
+              <li>Collaborated with functional consultants to translate business requirements into technical solutions</li>
+              <li>Supported smooth UAT and system migration across LMS and Middle Office projects</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag-sm">Dynamics 365</span>
+              <span class="tag-sm">JavaScript</span>
+              <span class="tag-sm">FetchXML</span>
+              <span class="tag-sm">UAT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Encryptix -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Machine Learning Intern</h3>
+                <p class="card-company">Encryptix</p>
+              </div>
+              <span class="card-date">Dec 2024 – Jan 2025</span>
+            </div>
+            <p class="card-desc">Built and shipped ML models for fraud detection and NLP classification, pushing fraud recall from near-zero to production-viable levels.</p>
+            <div class="card-highlights">
+              <div class="highlight-chip">
+                <span class="chip-num">0.15 → 0.91</span>
+                <span class="chip-label">fraud recall improvement</span>
+              </div>
+              <div class="highlight-chip">
+                <span class="chip-num">F1 0.78</span>
+                <span class="chip-label">NLP classification</span>
+              </div>
+            </div>
+            <ul class="card-list">
+              <li>Built fraud detection pipeline with Random Forest & XGBoost using SMOTE resampling + hyperparameter tuning</li>
+              <li>Developed text classification models (spam SMS & movie genre) with TF-IDF & Logistic Regression</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag-sm">Random Forest</span>
+              <span class="tag-sm">XGBoost</span>
+              <span class="tag-sm">SMOTE</span>
+              <span class="tag-sm">TF-IDF</span>
+              <span class="tag-sm">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bangkit -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <span class="card-badge distinction">🏅 Distinction</span>
+                <h3 class="card-title">Machine Learning Cohort</h3>
+                <p class="card-company">Bangkit Academy · Google, GoTo, Traveloka</p>
+              </div>
+              <span class="card-date">Feb 2023 – Jul 2023</span>
+            </div>
+            <p class="card-desc">Graduated with Distinction from Indonesia's most competitive tech training program, focusing on applied ML, computer vision, and end-to-end product development.</p>
+            <ul class="card-list">
+              <li>Built face detection model with TensorFlow achieving 95% accuracy, integrated into Daily Cloud mood-tracking app</li>
+              <li>Collaborated across AI, mobile, and cloud teams to deliver end-to-end solution combining CV and NLP</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag-sm">TensorFlow</span>
+              <span class="tag-sm">Computer Vision</span>
+              <span class="tag-sm">NLP</span>
+              <span class="tag-sm">Google · GoTo · Traveloka</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">02 · Projects</div>
+      <h2 class="section-title reveal">Things I've Built.</h2>
+      <p class="section-sub reveal">A selection of technical projects across machine learning, computer vision, and data systems.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-top">
+            <span class="project-badge">Featured · Ongoing</span>
+            <div class="project-links">
+              <span class="project-tag-status live">● Live</span>
+            </div>
+          </div>
+          <h3 class="project-title">Autonomous Vehicle Data Pipeline</h3>
+          <p class="project-desc">Leading end-to-end data annotation pipeline for Xiaomi's AV perception models — from 2D camera imagery to 4D LiDAR point cloud annotation, at scale.</p>
+          <div class="project-metrics">
+            <div class="pm"><span class="pm-val">7,870</span><span class="pm-key">datasets/month</span></div>
+            <div class="pm"><span class="pm-val">100%</span><span class="pm-key">final accuracy</span></div>
+            <div class="pm"><span class="pm-val">50+</span><span class="pm-key">team members</span></div>
+          </div>
+          <div class="project-stack">
+            <span>2D Camera Annotation</span>
+            <span>4D LiDAR</span>
+            <span>QA Systems</span>
+            <span>AV Perception</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-badge">ML · Python</span>
+            <a href="https://github.com/ahsanfirdaus1" target="_blank" rel="noopener" class="project-link-icon" title="GitHub">↗</a>
+          </div>
+          <h3 class="project-title">Credit Card Fraud Detection</h3>
+          <p class="project-desc">End-to-end fraud detection system using ensemble ML methods. Applied SMOTE resampling and hyperparameter tuning to dramatically improve minority class recall.</p>
+          <div class="project-metrics">
+            <div class="pm"><span class="pm-val">0.15 → 0.91</span><span class="pm-key">fraud recall</span></div>
+          </div>
+          <div class="project-stack">
+            <span>Random Forest</span>
+            <span>XGBoost</span>
+            <span>SMOTE</span>
+            <span>Python</span>
+            <span>Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-badge">Computer Vision · PyTorch</span>
+            <a href="https://github.com/ahsanfirdaus1" target="_blank" rel="noopener" class="project-link-icon" title="GitHub">↗</a>
+          </div>
+          <h3 class="project-title">Vehicle Counting Detection</h3>
+          <p class="project-desc">Real-time vehicle detection and counting system built with YOLO and PyTorch Transfer Learning, trained on custom dataset for traffic monitoring.</p>
+          <div class="project-metrics">
+            <div class="pm"><span class="pm-val">90%</span><span class="pm-key">accuracy</span></div>
+            <div class="pm"><span class="pm-val">1,667</span><span class="pm-key">training images</span></div>
+          </div>
+          <div class="project-stack">
+            <span>YOLO</span>
+            <span>PyTorch</span>
+            <span>Transfer Learning</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-badge">TensorFlow · Mobile</span>
+          </div>
+          <h3 class="project-title">Daily Cloud — Mood Tracking App</h3>
+          <p class="project-desc">Bangkit capstone: mood-tracking app combining face detection (TensorFlow, 95% accuracy) with NLP journal analysis to surface emotional patterns.</p>
+          <div class="project-metrics">
+            <div class="pm"><span class="pm-val">95%</span><span class="pm-key">face detection accuracy</span></div>
+          </div>
+          <div class="project-stack">
+            <span>TensorFlow</span>
+            <span>NLP</span>
+            <span>Computer Vision</span>
+            <span>Android</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-badge">NLP · Classification</span>
+          </div>
+          <h3 class="project-title">NLP Text Classification Suite</h3>
+          <p class="project-desc">Multi-task NLP pipeline covering spam detection and movie genre classification, built with TF-IDF vectorization and optimized Logistic Regression.</p>
+          <div class="project-metrics">
+            <div class="pm"><span class="pm-val">F1: 0.78</span><span class="pm-key">genre classification</span></div>
+          </div>
+          <div class="project-stack">
+            <span>TF-IDF</span>
+            <span>Logistic Regression</span>
+            <span>NLTK</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-badge">Research · In Progress</span>
+          </div>
+          <h3 class="project-title">ML for Bitcoin Time-Series Prediction</h3>
+          <p class="project-desc">Master's thesis: Comparative analysis of ML algorithms (LSTM, ARIMA, XGBoost) applied to financial time-series forecasting for cryptocurrency markets.</p>
+          <div class="project-stack">
+            <span>LSTM</span>
+            <span>ARIMA</span>
+            <span>XGBoost</span>
+            <span>Time Series</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label reveal">03 · Skills</div>
+      <h2 class="section-title reveal">What I Work With.</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <div class="skill-group-icon">◈</div>
+          <h3 class="skill-group-title">Leadership & Operations</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">People Leadership (50+ team)</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Cross-functional Coordination</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Stakeholder Communication</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">QA Operations & Process Design</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Performance Management</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-icon">◇</div>
+          <h3 class="skill-group-title">Machine Learning & AI</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">Data Annotation (2D/4D LiDAR)</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">TensorFlow / Keras</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Scikit-learn (RF, XGBoost)</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Computer Vision (YOLO)</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">NLP & Text Classification</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-icon">○</div>
+          <h3 class="skill-group-title">Systems & Infrastructure</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">Microsoft Dynamics 365</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">VMware vSphere</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Active Directory</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">JavaScript / FetchXML</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">SQL / Database Management</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-icon">□</div>
+          <h3 class="skill-group-title">Certifications & Achievements</h3>
+          <div class="cert-list">
+            <div class="cert-item">
+              <span class="cert-icon">🏅</span>
+              <div>
+                <p class="cert-name">Distinction Graduate</p>
+                <p class="cert-org">Bangkit Academy · Google, GoTo, Traveloka · 2023</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🌐</span>
+              <div>
+                <p class="cert-name">CCNA: Introduction to Networks</p>
+                <p class="cert-org">Cisco Certified · 2025</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🌐</span>
+              <div>
+                <p class="cert-name">CCNA: Switching, Routing & Wireless</p>
+                <p class="cert-org">Cisco Certified · 2025</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">📝</span>
+              <div>
+                <p class="cert-name">TOEFL ITP — Score 597</p>
+                <p class="cert-org">English Proficiency</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🥉</span>
+              <div>
+                <p class="cert-name">2nd Runner-Up — LIGA CODING For Beginner</p>
+                <p class="cert-org">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education strip -->
+      <div class="edu-strip reveal">
+        <div class="edu-item">
+          <span class="edu-degree">M.S. Software Information System</span>
+          <span class="edu-school">Universitas Gunadarma · Expected Sep 2026 · GPA 3.82/4.00</span>
+        </div>
+        <div class="edu-divider"></div>
+        <div class="edu-item">
+          <span class="edu-degree">B.S. Informatics</span>
+          <span class="edu-school">Universitas Gunadarma · Aug 2024 · GPA 3.80/4.00</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">04 · Contact</div>
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <h2 class="section-title">Let's build<br/>something great.</h2>
+          <p class="contact-desc">Open to opportunities in tech leadership, AI operations, and data-driven product teams. Based in Indonesia, open to remote and regional roles.</p>
+          <div class="contact-links">
+            <a href="mailto:ahsanfirdaus1@gmail.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>ahsanfirdaus1@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/ahsanfirdaus1" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">in</span>
+              <span>linkedin.com/in/ahsanfirdaus1</span>
+            </a>
+            <a href="https://github.com/ahsanfirdaus1" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">⌥</span>
+              <span>github.com/ahsanfirdaus1</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <a href="assets/cv.pdf" target="_blank" rel="noopener" class="resume-card">
+            <div class="resume-card-inner">
+              <span class="resume-icon">↓</span>
+              <span class="resume-label">Download Resume</span>
+              <span class="resume-sub">PDF · Updated 2026</span>
+            </div>
+          </a>
+          <div class="availability">
+            <span class="avail-dot"></span>
+            <span>Available for new opportunities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">AF<span class="dot">.</span></span>
+      <span class="footer-copy">© 2026 Ahsan Firdaus · Built with intention.</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/ahsanfirdaus1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahsanfirdaus1" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 

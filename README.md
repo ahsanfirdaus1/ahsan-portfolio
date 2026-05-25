@@ -1,86 +1,121 @@
-﻿# Ahsan Firdaus Portfolio
+﻿# Ahsan Firdaus — Portfolio
 
-Personal portfolio website for **Ahsan Firdaus** built with static frontend stack (HTML, CSS, JavaScript) and ready for GitHub Pages deployment.
+Personal portfolio website for **Ahsan Firdaus**, Technical Team Leader in AI Operations & Autonomous Vehicle Data Systems.
 
-## Live Purpose
-This website is designed for:
-- Hiring Managers
-- Recruiters
-- Technical Leadership stakeholders
+Built with a static frontend stack (HTML, CSS, Vanilla JavaScript) — no build step, no dependencies, GitHub Pages ready.
 
-It highlights leadership impact, AI/ML operations experience, enterprise systems background, and measurable outcomes.
+🔗 **Live site**: [ahsanfirdaus1.github.io/ahsan-portfolio](https://ahsanfirdaus1.github.io/ahsan-portfolio/)
+
+---
+
+## About This Site
+
+Designed for **recruiters, hiring managers, and technical leadership stakeholders** looking to evaluate:
+
+- Leadership track record (50+ team, Xiaomi AV project)
+- AI/ML operations and data annotation expertise
+- Machine learning project portfolio (fraud detection, computer vision, NLP)
+- Enterprise systems background (Dynamics 365, VMware, Active Directory)
+
+---
 
 ## Tech Stack
-- HTML5
-- CSS3
-- Vanilla JavaScript
+
+- HTML5 (semantic, SEO-optimized)
+- CSS3 (custom properties, Grid, Flexbox, keyframe animations)
+- Vanilla JavaScript (Intersection Observer, scroll animations, counter animation)
+- Google Fonts: [Syne](https://fonts.google.com/specimen/Syne) + [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+
+No frameworks. No build tools. No npm. Just push and it works.
+
+---
 
 ## Project Structure
-```text
-.
-|-- index.html
-|-- style.css
-|-- script.js
-|-- assets/
-|   |-- profile.jpg
-|   `-- cv.pdf
+
+```
+ahsan-portfolio/
+├── index.html          # Main HTML (all sections)
+├── style.css           # All styles, CSS variables, responsive breakpoints
+├── script.js           # Scroll reveal, skill bar animations, counter, nav behavior
+├── assets/
+│   ├── profile.jpg     # Profile photo (square recommended, min 400×400px)
+│   └── cv.pdf          # Resume/CV download
+└── README.md
 ```
 
+---
+
 ## Features
-- Responsive layout (desktop, tablet, mobile)
-- Sticky navigation with mobile menu
-- Hero section with CTA (Download CV, Contact)
-- About, Experience, Projects, Education, Skills, and Contact sections
-- Subtle reveal animation on scroll
-- SEO meta title and description
-- GitHub Pages compatible (no build step)
+
+- **Dark minimalist design** — Syne display font, emerald `#6ee7b7` accent, subtle grid + ambient orbs
+- **Hero with live metrics** — 50+ team, 7,870 datasets/month, 100% accuracy — animated counters on scroll
+- **Timeline experience section** — highlight chips for key metrics per role
+- **Projects grid** — featured + 5 supporting cards with tech stack tags and measurable outcomes
+- **Animated skill bars** — triggered by Intersection Observer when section enters viewport
+- **Scroll reveal** — staggered fade-in animations on all major elements
+- **Sticky nav** — blur backdrop, active section highlight, mobile hamburger menu
+- **Availability badge** — pulsing dot in Contact section signals open-to-work status
+- **Responsive** — desktop, tablet (≤1024px), mobile (≤768px), small mobile (≤480px)
+- **SEO meta tags** — title, description, keywords, Open Graph
+- **No build step** — GitHub Pages compatible out of the box
+
+---
 
 ## Run Locally
-Because this is a static site, you can open `index.html` directly in your browser.
 
-For a local server (recommended):
+This is a fully static site. Two options:
 
-### Option 1: VS Code Live Server
-1. Install **Live Server** extension
-2. Right-click `index.html`
-3. Select **Open with Live Server**
+**Option 1 — VS Code Live Server** (recommended)
+1. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
+2. Right-click `index.html` → **Open with Live Server**
 
-### Option 2: Python HTTP Server
+**Option 2 — Python**
 ```bash
 python -m http.server 5500
 ```
-Open: [http://localhost:5500](http://localhost:5500)
+Then open [http://localhost:5500](http://localhost:5500)
+
+> Opening `index.html` directly (`file://`) also works, but Google Fonts may not load without a local server.
+
+---
 
 ## Deploy to GitHub Pages
-1. Create a GitHub repository
-2. Add remote and push:
+
+If deploying to an existing repo for the first time:
 
 ```bash
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin master
+git add .
+git commit -m "chore: redesign portfolio"
+git push
 ```
 
-3. In GitHub repository:
-- Go to **Settings** > **Pages**
+Then in your GitHub repo:
+- **Settings** → **Pages**
 - Source: **Deploy from a branch**
-- Branch: `master` and folder `/ (root)`
+- Branch: `master` (or `main`) · Folder: `/ (root)`
 - Click **Save**
 
-Your site will be available at:
-`https://<your-username>.github.io/<repo-name>/`
+Live at: `https://ahsanfirdaus1.github.io/ahsan-portfolio/`
 
-## Customize Content
-- Update text content in `index.html`
-- Replace profile photo at `assets/profile.jpg`
-- Replace resume file at `assets/cv.pdf`
-- Update social links in Contact section (LinkedIn/GitHub)
+Changes go live within ~1 minute after every push.
 
-## Roadmap (Optional Future Improvements)
-- Dark mode toggle
-- Multi-language support (EN/ID/ZH)
-- Blog section
-- Analytics integration
-- Project detail pages
+---
+
+## Updating Content
+
+| What to update | Where |
+|---|---|
+| Name, headline, about text | `index.html` — `#home`, `#about` sections |
+| Experience entries | `index.html` — `.timeline` inside `#experience` |
+| Projects | `index.html` — `.projects-grid` inside `#projects` |
+| Skill bars & levels | `index.html` — `--w` CSS variable on each `.skill-fill` |
+| Accent color | `style.css` — `--accent` in `:root` |
+| Profile photo | Replace `assets/profile.jpg` (square crop recommended) |
+| Resume/CV | Replace `assets/cv.pdf` |
+| Social links | `index.html` — Contact section + footer |
+
+---
 
 ## License
-Personal portfolio project. You may adapt the structure/style for your own portfolio.
+
+Personal portfolio project. You may adapt the structure and visual style for your own use — just swap out the content.
