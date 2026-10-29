@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Ahsan Firdaus**, Technical Team Leader in AI Operations & Autonomous Vehicle Data Systems.
 
-Built with a static frontend stack (HTML, CSS, Vanilla JavaScript) — no build step, no dependencies, GitHub Pages ready.
+Built as a static site (HTML, CSS, vanilla JavaScript) with zero runtime dependencies — no build step, GitHub Pages ready.
 
 🔗 **Live site**: [ahsanfirdaus1.github.io/ahsan-portfolio](https://ahsanfirdaus1.github.io/ahsan-portfolio/)
 
@@ -14,7 +14,7 @@ Designed for **recruiters, hiring managers, and technical leadership stakeholder
 
 - Leadership track record (50+ team, Xiaomi AV project)
 - AI/ML operations and data annotation expertise
-- Machine learning project portfolio (fraud detection, computer vision, NLP)
+- Machine learning project portfolio (fraud detection, computer vision, NLP, client-side tools)
 - Enterprise systems background (Dynamics 365, VMware, Active Directory)
 
 ---
@@ -26,20 +26,25 @@ Designed for **recruiters, hiring managers, and technical leadership stakeholder
 - Vanilla JavaScript (IntersectionObserver, progressive enhancement)
 - System font stack (SF Pro on Apple devices) — no external fonts, no Three.js
 
-No frameworks. No build tools. No npm. Just push and it works.
+No frameworks, no bundler, no runtime dependencies.
 
 ---
 
 ## Project Structure
 
 ```
-ahsan-portfolio/
-├── index.html          # Main HTML (all sections)
-├── style.css           # All styles, CSS variables, responsive breakpoints
-├── script.js           # Nav, scroll reveal, counters, workflow tabs, simulator
+.
+├── index.html          # All page sections and content
+├── style.css           # Design tokens, components, responsive breakpoints
+├── script.js           # Theme, nav, reveal, counters, workflow tabs, simulator
 ├── assets/
-│   ├── profile.jpg     # Profile photo (square recommended, min 400×400px)
-│   └── cv.pdf          # Resume/CV download
+│   ├── profile.png     # Profile photo (1254×1254 source)
+│   └── cv.pdf          # Resume/CV served by the Download CV buttons
+├── docs/
+│   └── Ahsan_Firdaus_Portfolio_PRD.pdf
+├── server.js           # Zero-dependency local static server
+├── capture_qa.js       # Headless Chrome QA screenshot pass
+├── package.json        # Dev scripts only (no dependencies)
 └── README.md
 ```
 
@@ -48,14 +53,14 @@ ahsan-portfolio/
 ## Features
 
 - **Apple-inspired design** — tight display typography, generous whitespace, rounded hardware cards, frosted-glass translucent chrome, single Apple blue accent
-- **Light & dark mode with manual toggle** — defaults to system preference via `prefers-color-scheme` with an interactive toggle (System / Dark / Light) and persistent storage
+- **Light & dark mode with manual toggle** — defaults to system preference via `prefers-color-scheme` with an interactive toggle and persistent storage
 - **Hero with live metrics** — 50+ team, 7,870 datasets/month, 100% accuracy, animated counters, live status pill
 - **Interactive widgets** — agent workflow tabs and a terminal-style agent simulator
 - **Operational playbooks** — interactive production SOPs and engineering takeaways from real-world perception pipelines
-- **Project filter** — segmented control (All / AI & ML / Systems) with smooth spring-driven sliding thumb
+- **Project filter** — segmented control (All / AI & ML / Systems) with spring-driven sliding thumb
 - **Mobile conversion bar** — sticky bottom action pill for 1-tap email and CV download
 - **Accessible & compliant** — skip link, ARIA tabs, keyboard-friendly accordion, visible focus rings
-- **Reduced-motion aware** — animations swap to gentle linear cross-fades when requested
+- **Reduced-motion aware** — animations swap to gentle cross-fades when requested
 - **Responsive** — desktop, tablet (≤860px), mobile (≤640px)
 - **SEO meta tags** — title, description, keywords, Open Graph, Twitter Cards
 - **No build step** — pure static HTML/CSS/JS, GitHub Pages ready
@@ -64,41 +69,48 @@ ahsan-portfolio/
 
 ## Run Locally
 
-This is a fully static site. Two options:
+Requires Node.js 20+ (dev server and QA script only).
 
-**Option 1 — VS Code Live Server** (recommended)
-1. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
-2. Right-click `index.html` → **Open with Live Server**
-
-**Option 2 — Python**
 ```bash
-python -m http.server 5500
+npm start
 ```
-Then open [http://localhost:5500](http://localhost:5500)
 
-> Opening `index.html` directly (`file://`) also works, but Google Fonts may not load without a local server.
+Then open [http://127.0.0.1:3000](http://127.0.0.1:3000). Override the port with `PORT=4000 npm start`.
+
+Alternatives:
+
+- **VS Code Live Server** — right-click `index.html` → *Open with Live Server*
+- **Python** — `python -m http.server 5500`
+- Opening `index.html` directly (`file://`) also works, though a local server is recommended
+
+---
+
+## QA Pass
+
+```bash
+npm run qa
+```
+
+Launches local headless Chrome against the site, checks page metadata and horizontal overflow, and saves desktop (dark/light) plus mobile screenshots to the OS temp directory. Set `CHROME_PATH` if Chrome is not in a standard location.
 
 ---
 
 ## Deploy to GitHub Pages
 
-If deploying to an existing repo for the first time:
-
 ```bash
 git add .
-git commit -m "chore: redesign portfolio"
+git commit -m "chore: update portfolio"
 git push
 ```
 
-Then in your GitHub repo:
+Then in the GitHub repo:
+
 - **Settings** → **Pages**
 - Source: **Deploy from a branch**
-- Branch: `master` (or `main`) · Folder: `/ (root)`
+- Branch: `main` · Folder: `/ (root)`
 - Click **Save**
 
-Live at: `https://ahsanfirdaus1.github.io/ahsan-portfolio/`
-
-Changes go live within ~1 minute after every push.
+Live at `https://ahsanfirdaus1.github.io/ahsan-portfolio/`. Changes go live within ~1 minute after each push.
 
 ---
 
@@ -110,7 +122,7 @@ Changes go live within ~1 minute after every push.
 | Experience entries | `index.html` — `.timeline` inside `#experience` |
 | Projects | `index.html` — `.project-grid` inside `#featured` |
 | Accent color | `style.css` — `--blue` in `:root` |
-| Profile photo | Replace `assets/profile.jpg` (square crop recommended) |
+| Profile photo | Replace `assets/profile.png` (square crop recommended) |
 | Resume/CV | Replace `assets/cv.pdf` |
 | Social links | `index.html` — Contact section + footer |
 
