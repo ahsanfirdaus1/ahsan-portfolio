@@ -4,7 +4,7 @@ Personal portfolio website for **Ahsan Firdaus**, Technical Team Leader in AI Op
 
 Built as a static site (HTML, CSS, vanilla JavaScript) with zero runtime dependencies — no build step, GitHub Pages ready.
 
-🔗 **Live site**: [ahsanfirdaus1.github.io/ahsan-portfolio](https://ahsanfirdaus1.github.io/ahsan-portfolio/)
+🔗 **Live site**: [ahsanfirdaus.com](https://ahsanfirdaus.com/) · **Mirror**: [ahsanfirdaus1.github.io/ahsan-portfolio](https://ahsanfirdaus1.github.io/ahsan-portfolio/)
 
 ---
 
@@ -91,11 +91,22 @@ Alternatives:
 npm run qa
 ```
 
-Launches local headless Chrome against the site, checks page metadata and horizontal overflow, and saves desktop (dark/light) plus mobile screenshots to the OS temp directory. Set `CHROME_PATH` if Chrome is not in a standard location.
+Launches local headless Chrome against the site, checks page metadata and horizontal overflow, asserts the project filters (All / AI and ML / Systems), and saves desktop (dark/light), project-grid, and mobile screenshots to the OS temp directory. Set `CHROME_PATH` if Chrome is not in a standard location.
 
 ---
 
-## Deploy to GitHub Pages
+## Deploy
+
+### Primary — ahsanfirdaus.com (Dewaweb, manual upload)
+
+The domain is served by Dewaweb (LiteSpeed/cPanel) from `public_html`; pushes to GitHub do not update it.
+
+1. Update content locally and run `npm run qa`
+2. Upload only runtime files and overwrite: `index.html`, `style.css`, `script.js`, `assets/`
+3. Keep `docs/`, `README.md`, `server.js`, `capture_qa.js`, `package.json`, and `.git/` off the server
+4. Leave the `/ppv/` directory untouched — it hosts a separate app
+
+### Mirror — GitHub Pages
 
 ```bash
 git add .
@@ -103,14 +114,13 @@ git commit -m "chore: update portfolio"
 git push
 ```
 
-Then in the GitHub repo:
+Pages rebuilds from `main` automatically. Settings if needed:
 
 - **Settings** → **Pages**
 - Source: **Deploy from a branch**
 - Branch: `main` · Folder: `/ (root)`
-- Click **Save**
 
-Live at `https://ahsanfirdaus1.github.io/ahsan-portfolio/`. Changes go live within ~1 minute after each push.
+Live at `https://ahsanfirdaus1.github.io/ahsan-portfolio/` within ~1 minute after each push.
 
 ---
 
