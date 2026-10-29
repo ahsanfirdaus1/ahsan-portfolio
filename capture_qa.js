@@ -160,6 +160,25 @@ async function run() {
       throw new Error('Page title is empty — QA attached to the wrong Chrome target');
     }
 
+    // Project filter sanity check
+    const filterCheck = await send('Runtime.evaluate', {
+      expression: `(() => {
+        const btn = (name) => Array.from(document.querySelectorAll('[data-filter]')).find((b) => b.dataset.filter === name);
+        const visible = () => Array.from(document.querySelectorAll('.project')).filter((p) => !p.hidden).map((p) => p.querySelector('h4')?.textContent?.trim());
+        const names = {};
+        for (const filter of ['all', 'ai-ml', 'systems']) {
+          btn(filter)?.click();
+          names[filter] = visible();
+        }
+        btn('all')?.click();
+        return names;
+      })()`,
+      returnByValue: true
+    });
+    const filters = filterCheck.result.value;
+    console.log('Project filter counts:', Object.fromEntries(Object.entries(filters).map(([k, v]) => [k, v.length])));
+    if (!filters['ai-ml'].includes('PPV')) throw new Error('PPV card missing from AI and ML filter');
+
     // Capture sections in dark mode
     const sections = ['home', 'about', 'featured', 'exploration', 'experience', 'education', 'insights', 'contact'];
     for (const sec of sections) {
@@ -181,6 +200,16 @@ async function run() {
       fs.writeFileSync(filename, buffer);
       console.log(`Saved screenshot: ${filename} (${buffer.length} bytes)`);
     }
+
+    // Project grid close-up
+    console.log('Capturing project grid...');
+    await send('Runtime.evaluate', {
+      expression: `document.querySelector('.project-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' })`
+    });
+    await sleep(1000);
+    const gridShot = await send('Page.captureScreenshot', { format: 'png' });
+    fs.writeFileSync(path.join(TMP, 'qa_projects.png'), Buffer.from(gridShot.data, 'base64'));
+    console.log('Saved project grid screenshot: qa_projects.png');
 
     // Light mode pass
     await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-color-scheme', value: 'light' }] });
