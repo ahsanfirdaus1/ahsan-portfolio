@@ -419,6 +419,8 @@ strong { font-weight: 600; }
 .project-metric span { font-size: 0.8125rem; color: var(--text-3); }
 .project-foot .tags { margin-top: 0; }
 .project-foot .btn-link { margin-top: 8px; font-size: 0.9375rem; }
+.project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+.project-links .btn-link { margin-top: 0; }
 
 /* ── Exploration ── */
 .exploration-hub { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
